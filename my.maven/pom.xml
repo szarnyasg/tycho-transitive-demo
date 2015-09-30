@@ -57,6 +57,13 @@
 			<artifactId>my.tycho</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+
+		<!-- to make it work, you have to add the dependency explicitly -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.google.guava</groupId> -->
+		<!-- <artifactId>guava</artifactId> -->
+		<!-- <version>15.0</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 
 </project>
