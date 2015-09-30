@@ -29,3 +29,27 @@
     at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
     ... 2 more
   ```
+  
+3. To fix this, you have to define the dependency explicitly. Edit the `pom.xml` file in the `my.maven` project by uncommenting the Guava dependency:
+
+  ```xml
+  <!-- to make it work, you have to add the dependency explicitly -->
+  <dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+  	<version>15.0</version>
+  </dependency>
+  ```
+
+4. Run the build and the application again:
+
+  ```bash
+  mvn clean install
+  java -jar target/my.maven-1.0.0-SNAPSHOT.jar 
+  ```
+  
+  It will display the correct output:
+  
+  ```
+  {hello=world}
+  ```
